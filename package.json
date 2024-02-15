@@ -1,9 +1,8 @@
 {
-  "name": "@tobedamobe/plugin-teammembers",
+  "name": "@artdesigndigital/payload-plugin-teammembers",
   "version": "0.0.8",
-  "homepage:": "https://payloadcms.com",
-  "repository": "git@github.com:payloadcms/payload-plugin-template.git",
-  "description": "Blank plugin template for Payload",
+  "repository": "https://github.com/art-design-digital/payload-plugin-teammembers",
+  "description": "Create and manage team members in the backend of a PayloadCMS for your business, company, team, organization, etc",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
@@ -11,8 +10,7 @@
     "cms",
     "plugin",
     "typescript",
-    "react",
-    "template"
+    "react"
   ],
   "scripts": {
     "build": "tsc",
@@ -22,7 +20,7 @@
     "clean": "rimraf dist && rimraf dev/yarn.lock",
     "prepublishOnly": "yarn clean && yarn build"
   },
-  "author": "dev@payloadcms.com",
+  "author": "tobe_damobe@me.com",
   "license": "MIT",
   "peerDependencies": {
     "payload": "^2.0.0"
