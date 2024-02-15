@@ -20,7 +20,7 @@ jobs:
             - name: 📦 run yarn
               uses: borales/actions-yarn@v5.0.0
               with:
-                cmd: prepublishOnly
+                cmd: build
             - name: 🚀 publish
               run: npm publish --access public
               env:
