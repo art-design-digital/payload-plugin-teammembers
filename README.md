@@ -28,8 +28,6 @@ yarn add @artdesigndigital/payload-plugin-teammembers
 To use the plugin simple add it to your payload.config.ts
 
 ```ts
-import teamMemberPlugin from '@artdesigndigital/payload-plugin-teammembers'
-
 export const config = buildConfig({
   plugins: [
     teamMemberPlugin(
