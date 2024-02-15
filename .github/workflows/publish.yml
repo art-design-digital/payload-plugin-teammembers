@@ -1,21 +1,23 @@
-name: Publish New Version
+name: "🚀 release"
 
 on:
-  release:
-    types: [created]
+    push:
+        branches:
+          - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: yarn install
-      - run: yarn test
-      - run: yarn build
-      - run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    release:
+        name: 🚀 release
+        runs-on: ubuntu-latest
+        steps:
+            - name: 📚 checkout
+              uses: actions/checkout@v2.1.1
+            - name: 🟢 node
+              uses: actions/setup-node@v1.4.2
+              with:
+                  node-version: 18
+                  registry-url: https://registry.npmjs.org
+            - name: 🚀 publish
+              run: npm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
