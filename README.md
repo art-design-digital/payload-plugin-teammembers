@@ -16,13 +16,13 @@ The plugin installs two new collections to your PayloadCMS: TeamMembers and Depa
 To install te plugin first download it from npm via
 
 ```terminal
-npm install @artdesigndigital/payload-plugin-teammembers
+npm install @tobedamobe/payload-plugin-teammembers
 ```
 
 or
 
 ```terminal
-yarn add @artdesigndigital/payload-plugin-teammembers
+yarn add @tobedamobe/payload-plugin-teammembers
 ```
 
 To use the plugin simple add it to your payload.config.ts
@@ -50,7 +50,7 @@ There are some properties you can use to modify the behavior of the plugin.
 | localized 	| Decides if the plugin has localization features or not. This only effects the field _position_ because all other data is language independent.<sup>*</sup> 	| boolean 	| `false` 	|
 | uploadsCollection 	| Tell the plugin which collection shall be used for uploading a photo for a team member. 	| string 	| `'media'` 	|
 
-$\star$ <em>Please be sure the have the localization feature enabled in your payload instance. The plugin won't break but there is no sende in enabling a localized plugin with no localization.</em>
+<em>\* Please be sure the have the localization feature enabled in your payload instance. The plugin won't break but there is no sense in enabling a localized plugin with no localization.</em>
 
 ## Available team member fields
 The fields that can be used inside a team member are
