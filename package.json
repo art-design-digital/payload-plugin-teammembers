@@ -21,8 +21,7 @@
     "test": "cd dev && yarn test",
     "lint": "eslint src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
-    "clean": "rimraf dist && rimraf dev/yarn.lock",
-    "rimraf": "./node_modules/rimraf/bin.js",
+    "clean": "./node_modules/rimraf/bin.js dist && ./node_modules/rimraf/bin.js dev/yarn.lock",
     "prepublishOnly": "yarn clean && yarn build"
   },
   "author": "griess@art-design.de",
