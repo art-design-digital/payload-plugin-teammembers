@@ -18,11 +18,11 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "cd dev && yarn test",
+    "test": "cd dev && npm run test",
     "lint": "eslint src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "clean": "rimraf dist && rimraf dev/yarn.lock",
-    "prepublishOnly": "yarn clean && yarn build"
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "author": "griess@art-design.de",
   "license": "MIT",
