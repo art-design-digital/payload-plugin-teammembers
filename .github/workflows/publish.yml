@@ -17,7 +17,11 @@ jobs:
               with:
                   node-version: 18
                   registry-url: https://registry.npmjs.org
-            - name: 📦 run yarn
+            - name: 📦 install plugin
+              uses: borales/actions-yarn@v5.0.0
+              with:
+                cmd: install
+            - name: 📦 build plugin
               uses: borales/actions-yarn@v5.0.0
               with:
                 cmd: build
