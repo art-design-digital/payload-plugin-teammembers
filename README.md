@@ -16,13 +16,13 @@ The plugin installs two new collections to your PayloadCMS: TeamMembers and Depa
 To install te plugin first download it from npm via
 
 ```terminal
-npm install @tobedamobe/payload-plugin-teammembers
+npm install @artdesigndigital/payload-plugin-teammembers
 ```
 
 or
 
 ```terminal
-yarn add @tobedamobe/payload-plugin-teammembers
+yarn add @artdesigndigital/payload-plugin-teammembers
 ```
 
 To use the plugin simple add it to your payload.config.ts
