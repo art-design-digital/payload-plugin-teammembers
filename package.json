@@ -1,6 +1,6 @@
 {
   "name": "@tobedamobe/payload-plugin-teammembers",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "repository": "https://github.com/art-design-digital/payload-plugin-teammembers",
   "description": "Create and manage team members in the backend of a PayloadCMS for your business, company, team, organization, etc",
   "main": "dist/index.js",
