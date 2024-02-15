@@ -75,7 +75,7 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
             en: 'Please select the department of the team member.',
             de: 'Bitte wählen Sie die Abteilung des Teammitglieds aus.',
           },
-          allowCreate: false,
+          allowCreate: true,
         },
         hasMany: false,
       },
