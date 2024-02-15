@@ -2,7 +2,7 @@
   "name": "@art-design-digital/payload-plugin-teammembers",
   "version": "0.0.11",
   "repository": "https://github.com/art-design-digital/payload-plugin-teammembers",
-  "description": "Create and manage team members in the backend of a PayloadCMS for your business, company, team, organization, etc",
+  "description": "Create and manage team members in the backend of a PayloadCMS for your business, company, team, organization, etc.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
@@ -12,6 +12,10 @@
     "typescript",
     "react"
   ],
+  "engines" : {
+    "npm" : ">=9.0.0",
+    "node" : ">=16.0.0 <20.0.0"
+  },
   "scripts": {
     "build": "tsc",
     "test": "cd dev && yarn test",
