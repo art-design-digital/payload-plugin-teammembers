@@ -11,7 +11,7 @@ To use the plugin it is better to have
 
 The plugin installs two new collections to your PayloadCMS: TeamMembers and Departments. Every TeamMember is related to one Department.
 
-### How to install a plugin
+### How to install the plugin
 
 To install te plugin first download it from npm via
 
