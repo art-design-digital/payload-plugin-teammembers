@@ -12,7 +12,7 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
       defaultColumns: ['name', 'position', 'email'],
       description: {
         en: 'Create your own team members and add them to your website.',
-        de: 'Erstellen Sie sich eigene Teammitglieder und fügen Sie diese auf Ihrer Website ein.',
+        de: 'Erstellen Sie eigene Teammitglieder und fügen Sie diese auf Ihrer Website ein.',
       },
     },
     labels: {
@@ -43,7 +43,7 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
         admin: {
           description: {
             en: 'Please enter the name of the team member.',
-            de: 'Bitte geben Sie den Namen des Teammitglieds ein.',
+            de: 'Bitte geben Sie hier den Namen des Teammitglieds ein.',
           },
         },
       },
