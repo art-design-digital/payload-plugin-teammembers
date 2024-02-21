@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/dist/exports/types'
+import { translations } from '../translations/departments'
 import { PluginOptionsTypes, defaultPluginOptions } from '../types'
 import deepmerge from '../utils/deepmerge'
 
@@ -10,20 +11,11 @@ export const Departments = (userPluginOptions: PluginOptionsTypes) => {
     admin: {
       useAsTitle: 'name',
       defaultColumns: ['name'],
-      description: {
-        en: 'Create your own departments and group team members.',
-        de: 'Erstellen Sie sich eigene Abteilungen und gruppieren Sie Teammitglieder.',
-      },
+      description: translations.admin.description,
     },
     labels: {
-      singular: {
-        en: 'Department',
-        de: 'Abteilung',
-      },
-      plural: {
-        en: 'Departments',
-        de: 'Abteilungen',
-      },
+      singular: translations.labels.singular,
+      plural: translations.labels.plural,
     },
     access: {
       create: () => true,
@@ -35,17 +27,11 @@ export const Departments = (userPluginOptions: PluginOptionsTypes) => {
       {
         type: 'text',
         name: 'name',
-        label: {
-          en: 'Name',
-          de: 'Name',
-        },
+        label: translations.fields.name.label,
         localized: pluginOptions?.localized,
         required: true,
         admin: {
-          description: {
-            en: 'Please enter the name of the department.',
-            de: 'Bitte geben Sie den Namen der Abteilung ein.',
-          },
+          description: translations.fields.name.admin.description,
         },
       },
     ],

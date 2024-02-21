@@ -1,4 +1,5 @@
 import { CollectionConfig } from 'payload/dist/exports/types'
+import { teamMemberTranslations } from '../translations'
 import { PluginOptionsTypes, defaultPluginOptions } from '../types'
 import deepmerge from '../utils/deepmerge'
 
@@ -10,20 +11,11 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
     admin: {
       useAsTitle: 'name',
       defaultColumns: ['name', 'position', 'email'],
-      description: {
-        en: 'Create your own team members and add them to your website.',
-        de: 'Erstellen Sie eigene Teammitglieder und fügen Sie diese auf Ihrer Website ein.',
-      },
+      description: teamMemberTranslations.admin.description,
     },
     labels: {
-      singular: {
-        en: 'Team Member',
-        de: 'Teammitglied',
-      },
-      plural: {
-        en: 'Team Members',
-        de: 'Teammitglieder',
-      },
+      singular: teamMemberTranslations.labels.singular,
+      plural: teamMemberTranslations.labels.plural,
     },
     access: {
       create: () => true,
@@ -34,47 +26,29 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
     fields: [
       {
         name: 'name',
-        label: {
-          en: 'Name',
-          de: 'Name',
-        },
+        label: teamMemberTranslations.fields.name.label,
         type: 'text',
         required: true,
         admin: {
-          description: {
-            en: 'Please enter the name of the team member.',
-            de: 'Bitte geben Sie hier den Namen des Teammitglieds ein.',
-          },
+          description: teamMemberTranslations.fields.name.admin.description,
         },
       },
       {
         name: 'position',
-        label: {
-          en: 'Position',
-          de: 'Position',
-        },
+        label: teamMemberTranslations.fields.position.label,
         type: 'text',
         localized: pluginOptions?.localized,
         admin: {
-          description: {
-            en: 'Please enter the position of the team member.',
-            de: 'Bitte geben Sie die Position des Teammitglieds ein.',
-          },
+          description: teamMemberTranslations.fields.position.admin.description,
         },
       },
       {
         type: 'relationship',
         relationTo: 'departments',
         name: 'department',
-        label: {
-          en: 'Department',
-          de: 'Abteilung',
-        },
+        label: teamMemberTranslations.fields.department.label,
         admin: {
-          description: {
-            en: 'Please select the department of the team member.',
-            de: 'Bitte wählen Sie die Abteilung des Teammitglieds aus.',
-          },
+          description: teamMemberTranslations.fields.department.admin.description,
           allowCreate: true,
         },
         hasMany: false,
@@ -82,44 +56,26 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
       {
         type: 'email',
         name: 'email',
-        label: {
-          en: 'Email',
-          de: 'E-Mail',
-        },
+        label: teamMemberTranslations.fields.email.label,
         admin: {
-          description: {
-            en: 'Please enter the email of the team member.',
-            de: 'Bitte geben Sie die E-Mail des Teammitglieds ein.',
-          },
+          description: teamMemberTranslations.fields.email.admin.description,
         },
       },
       {
         type: 'text',
         name: 'phone',
-        label: {
-          en: 'Phone',
-          de: 'Telefon',
-        },
+        label: teamMemberTranslations.fields.phone.label,
         admin: {
-          description: {
-            en: 'Please enter the phone number of the team member.',
-            de: 'Bitte geben Sie die Telefonnummer des Teammitglieds ein.',
-          },
+          description: teamMemberTranslations.fields.phone.admin.description,
         },
       },
       {
         name: 'image',
-        label: {
-          en: 'Photo',
-          de: 'Foto',
-        },
+        label: teamMemberTranslations.fields.image.label,
         type: 'upload',
         relationTo: pluginOptions?.uploadsCollection,
         admin: {
-          description: {
-            en: 'Please upload a photo of the team member.',
-            de: 'Bitte laden Sie ein Foto des Teammitglieds hoch.',
-          },
+          description: teamMemberTranslations.fields.image.admin.description,
         },
       },
     ],
