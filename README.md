@@ -60,9 +60,38 @@ The fields that can be used inside a team member are
 | name 	| The name of your team member. 	| text 	|
 | position 	| Position of the member. E.g. Key account manager. 	| text 	|
 | department 	| Which department the members belongs to. 	| relationship 	|
-| email 	| The e-mail adress of the member. 	| email 	|
-| phone 	| The phone or mobile number. No speicific fomat. It belongs to you to format is whem fetching via API. 	| text 	|
+| email 	| The e-mail address of the member. 	| email 	|
+| phone 	| The phone or mobile number. No specific format. It is on you to format is when fetching via API. 	| text 	|
 | photo 	| A photo of the team member. 	| upload 	|
+
+## Available department fields
+The fields that can be used inside a department are
+
+| **Field** 	| **Usage** 	| **Type** 	|
+|---	|---	|---	|
+| name 	| The name of your department. 	| text 	|
+
+## Language support
+The plugin supports different languages when you use it in your PayloadCMS AdminUI. Please notice that all translations are done by machine from german as the starting point. Please contact us if there are any mistakes in a translation.
+
+Supported languages at this point are:
+
+| **Language** | **Code** |
+|--- |--- |
+| English | en |
+| German | de |
+| French | fr |
+| Spanish | es |
+| Portuguese | pt |
+| Italian | it |
+| Dutch | nl |
+| Russian | ru |
+| Japanese | ja |
+| Chinese | zh |
+| Polish | pl |
+| Swedish | sv |
+| Czech | cs |
+| Turkish | tr |
 
 # Questions
 Please contact [art&design digital](mailto:info@ad-digital.de) with any questions about using this plugin.
