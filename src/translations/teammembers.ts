@@ -1,6 +1,6 @@
 export const translations = {
   /**
-   * Collection translations
+   * Team members collection translations
    */
   admin: {
     description: {
