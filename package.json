@@ -1,6 +1,6 @@
 {
   "name": "@art-design-digital/payload-plugin-teammembers",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": "https://github.com/art-design-digital/payload-plugin-teammembers",
   "description": "Create and manage team members in the backend of a PayloadCMS for your business, company, team, organization, etc.",
   "main": "dist/index.js",
