@@ -4,8 +4,10 @@ import Users from './collections/Users'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { webpackBundler } from '@payloadcms/bundler-webpack'
 import { slateEditor } from '@payloadcms/richtext-slate'
-import { teamMemberPlugin } from '../../src/index'
 import { Media } from './collections/Media'
+
+// @ts-ignore - this is a valid import
+import { teamMemberPlugin } from '../../src/index'
 
 export default buildConfig({
   admin: {
@@ -50,6 +52,7 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
+  // @ts-ignore - this is a valid config
   plugins: [teamMemberPlugin({ enabled: true, localized: true, uploadsCollection: 'media' })],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
