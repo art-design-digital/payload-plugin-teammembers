@@ -34,7 +34,11 @@ export const config = buildConfig({
       {
         enabled: true,
         localized: true,
-        uploadsCollection: 'media'
+        uploadsCollection: 'media',
+        adminGroup: {
+          en: 'Company data',
+          de: 'Firmendaten',
+        },
       }
     )
   ]
@@ -49,6 +53,7 @@ There are some properties you can use to modify the behavior of the plugin.
 | enabled 	| Switches the whole plugin on or off 	| boolean 	| `false` 	|
 | localized 	| Decides if the plugin has localization features or not. This only effects the field _position_ because all other data is language independent.<sup>*</sup> 	| boolean 	| `false` 	|
 | uploadsCollection 	| Tell the plugin which collection shall be used for uploading a photo for a team member. 	| string 	| `'media'` 	|
+|adminGroup|  Put the collections that come with this plugin into a custom existing or new groups in your admin UI.| string \|\| {\[key: string\]: string}| `undefined`|
 
 <em>\* Please be sure the have the localization feature enabled in your payload instance. The plugin won't break but there is no sense in enabling a localized plugin with no localization.</em>
 
