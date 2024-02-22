@@ -9,6 +9,7 @@ export const Departments = (userPluginOptions: PluginOptionsTypes) => {
   return {
     slug: 'departments',
     admin: {
+      group: pluginOptions?.adminGroup || undefined,
       useAsTitle: 'name',
       defaultColumns: ['name'],
       description: translations.admin.description,

@@ -9,6 +9,7 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
   return {
     slug: 'team-members',
     admin: {
+      group: pluginOptions?.adminGroup || undefined,
       useAsTitle: 'name',
       defaultColumns: ['name', 'position', 'email'],
       description: teamMemberTranslations.admin.description,

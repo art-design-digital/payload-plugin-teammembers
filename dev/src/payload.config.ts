@@ -52,8 +52,19 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  // @ts-ignore - this is a valid config
-  plugins: [teamMemberPlugin({ enabled: true, localized: true, uploadsCollection: 'media' })],
+
+  plugins: [
+    // @ts-ignore - this is a valid config
+    teamMemberPlugin({
+      enabled: true,
+      localized: true,
+      uploadsCollection: 'media',
+      adminGroup: {
+        en: 'Company data',
+        de: 'Firmendaten',
+      },
+    }),
+  ],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),
