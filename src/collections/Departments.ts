@@ -18,11 +18,11 @@ export const Departments = (userPluginOptions: PluginOptionsTypes) => {
       singular: translations.labels.singular,
       plural: translations.labels.plural,
     },
-    access: {
-      create: () => true,
-      read: () => true,
-      update: () => true,
-      delete: () => true,
+    access: pluginOptions?.departmentsAccess || {
+      create: ({ req }) => req.user,
+      read: ({ req }) => req.user,
+      update: ({ req }) => req.user,
+      delete: ({ req }) => req.user,
     },
     fields: [
       {

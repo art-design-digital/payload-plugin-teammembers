@@ -1,3 +1,5 @@
+import type { Access } from 'payload/config'
+
 /**
  * Default plugin options
  * @type {PluginOptionsTypes}
@@ -5,12 +7,16 @@
  * @property {string} uploadsCollection - Collection name for uploads
  * @property {boolean} localized - Enable localization
  * @property {string || {}} adminGroup - Admin group name
+ * @property {Partial<Access>} teamMembersAccess - Access control for team members collection
+ * @property {Partial<Access>} departmentsAccess - Access control for departments collection
  */
 export const defaultPluginOptions: PluginOptionsTypes = {
   enabled: false,
   uploadsCollection: 'media',
   localized: false,
   adminGroup: undefined,
+  teamMembersAccess: undefined,
+  departmentsAccess: undefined,
 }
 
 export interface PluginOptionsTypes {
@@ -37,6 +43,18 @@ export interface PluginOptionsTypes {
    * @default ''
    */
   adminGroup?: string | { [key: string]: string }
+
+  /**
+   * Access control for team members collection
+   * @default { create: () => true, read: () => true, update: () => true, delete: () => true }
+   */
+  teamMembersAccess?: Partial<Access>
+
+  /**
+   * Access control for departments collection
+   * @default { create: () => true, read: () => true, update: () => true, delete: () => true }
+   */
+  departmentsAccess?: Partial<Access>
 }
 
 export interface TeamMembersTypes {}

@@ -18,11 +18,11 @@ export const TeamMembers = (userPluginOptions: PluginOptionsTypes) => {
       singular: teamMemberTranslations.labels.singular,
       plural: teamMemberTranslations.labels.plural,
     },
-    access: {
-      create: () => true,
-      read: () => true,
-      update: () => true,
-      delete: () => true,
+    access: pluginOptions?.teamMembersAccess || {
+      create: ({ req }) => req.user,
+      read: ({ req }) => req.user,
+      update: ({ req }) => req.user,
+      delete: ({ req }) => req.user,
     },
     fields: [
       {
