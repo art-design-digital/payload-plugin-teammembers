@@ -5,6 +5,15 @@ on:
         branches:
           - main
 
+# Trusted Publishing (OIDC): Der Lauf weist sich ueber ein kurzlebiges, von GitHub
+# signiertes Token gegenueber npm aus. Es gibt kein NPM_AUTH_TOKEN mehr — npm prueft,
+# ob Repository und Workflow-Dateiname mit dem am Paket hinterlegten Trusted Publisher
+# uebereinstimmen. Damit entfaellt das 90-Tage-Ablaufdatum der alten Token, und die
+# von npm zum Januar 2027 abgeschalteten "bypass 2FA"-Token werden nicht mehr gebraucht.
+permissions:
+    contents: read
+    id-token: write
+
 jobs:
     release:
         name: 🚀 release
@@ -15,8 +24,11 @@ jobs:
             - name: 🟢 node
               uses: actions/setup-node@v4.0.2
               with:
-                  node-version: 18
+                  node-version: 22
                   registry-url: https://registry.npmjs.org
+            # Trusted Publishing verlangt npm >= 11.5.1; Node 22 bringt noch npm 10 mit.
+            - name: ⬆️ npm aktualisieren
+              run: npm install -g npm@latest
             - name: 📦 install plugin
               uses: borales/actions-yarn@v5.0.0
               with:
@@ -27,5 +39,3 @@ jobs:
                 cmd: build
             - name: 🚀 publish
               run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
